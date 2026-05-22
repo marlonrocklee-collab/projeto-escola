@@ -1,0 +1,444 @@
+.mapa{
+    position: relative;
+
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 20px auto 40px auto;
+
+    transform: none; /* evita encolhimento no PC */
+}
+
+.img-mapa{
+    width: 100%;
+    height: auto;
+
+    display: block;
+}
+
+/* ÁREAS CLICÁVEIS */
+.area{
+    position: absolute;
+
+    background-color: transparent;
+
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* BALÕES */
+.frase{
+    display: none;
+    position: absolute;
+    z-index: 3;
+
+    background-color: rgba(0,0,0,0.9);
+    color: white;
+
+    padding: 12px 14px;
+    border-radius: 10px;
+
+    font-size: 18px; /* 🔥 aumenta no PC */
+    line-height: 24px;
+
+    width: max-content;
+    max-width: 280px;
+
+    white-space: normal;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+/* MOSTRAR BALÃO */
+.area:hover + .frase,
+.frase:hover{
+    display: block;
+}
+
+/* ===================== */
+/* ÁREAS DO MAPA */
+/* ===================== */
+
+/*0 ACESSO */
+.aacesso{
+    top: 47%;
+    left: 7%;
+    width: 3%;
+    height: 8%;
+}
+.facesso{
+    top: 42%;
+    left: 7%;
+}
+
+/*1 SERMÃO */
+.asermao{
+    top: 58%;
+    left: 87%;
+    width: 7%;
+    height: 20%;
+}
+.fsermao{
+    top: 53%;
+    left: 87%;
+}
+
+/*2 TEMPLO */
+.atemplo{
+    top: 14%;
+    left: 65%;
+    width: 8%;
+    height: 10%;
+}
+.ftemplo{
+    top: 10%;
+    left: 65%;
+}
+
+/*3 CENÁCULO */
+.acenaculo{
+    top: 9%;
+    left: 48%;
+    width: 10%;
+    height: 10%;
+}
+.fcenaculo{
+    top: 5%;
+    left: 48%;
+}
+
+/*4 HORTO */
+.ahorto{
+    top: 11%;
+    left: 30%;
+    width: 10%;
+    height: 10%;
+}
+.fhorto{
+    top: 7%;
+    left: 30%;
+}
+
+/*5 PALÁCIO */
+.apalacio{
+    top: 11%;
+    left: 18%;
+    width: 10%;
+    height: 12%;
+}
+.fpalacio{
+    top: 7%;
+    left: 18%;
+}
+
+/*6 FÓRUM */
+.aforum{
+    top: 39%;
+    left: 16%;
+    width: 7%;
+    height: 11%;
+}
+.fforum{
+    top: 35%;
+    left: 16%;
+}
+
+/*7 VIA SACRA */
+.avia{
+    top: 43%;
+    left: 50%;
+    width: 9%;
+    height: 8%;
+}
+.fvia{
+    top: 38%;
+    left: 50%;
+}
+
+/*8 CALVÁRIO */
+.acalvario{
+    top: 33%;
+    left: 82%;
+    width: 10%;
+    height: 12%;
+}
+.fcalvario{
+    top: 28%;
+    left: 82%;
+}
+
+/*9 TÚMULO */
+.atumulo{
+    top: 26%;
+    left: 74%;
+    width: 6%;
+    height: 6%;
+}
+.ftumulo{
+    top: 21%;
+    left: 74%;
+}
+
+/*10 BETESDA */
+.abetesda{
+    top: 65%;
+    left: 17%;
+    width: 15%;
+    height: 15%;
+}
+.fbetesda{
+    top: 61%;
+    left: 17%;
+}
+
+/*11 ASMONEUS */
+.aasmoneus{
+    top: 28%;
+    left: 42%;
+    width: 10%;
+    height: 10%;
+}
+.fasmoneus{
+    top: 24%;
+    left: 42%;
+}
+
+/*12 OVELHAS */
+.aovelhas{
+    top: 70%;
+    left: 65%;
+    width: 10%;
+    height: 14%;
+}
+.fovelhas{
+    top: 66%;
+    left: 65%;
+}
+
+/* ===================== */
+/* TÍTULO */
+/* ===================== */
+
+.titulo-pagina{
+
+    text-align: center;
+
+    margin: 40px 0 30px 0;
+
+    color: white;
+}
+
+.titulo-pagina h1{
+
+    font-size: 42px;
+
+    margin-bottom: 10px;
+
+    color: #ffb300;
+
+    text-shadow:
+        0 0 10px rgba(255,179,0,0.4),
+        0 0 20px rgba(0,0,0,0.7);
+}
+
+.titulo-pagina p{
+
+    font-size: 18px;
+
+    opacity: 0.9;
+
+    max-width: 700px;
+
+    margin: auto;
+
+    line-height: 1.6;
+}
+
+/* ===================== */
+/* AVISO ROTAÇÃO */
+/* ===================== */
+
+.aviso-rotacao{
+    display: none;
+}
+
+@media screen and (max-width: 900px) and (orientation: portrait){
+
+    .aviso-rotacao{
+        display: flex;
+
+        position: fixed;
+        z-index: 9999;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        background: rgba(0,0,0,0.95);
+
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+
+        padding: 30px;
+        box-sizing: border-box;
+    }
+
+    .mensagem-rotacao{
+        color: white;
+    }
+
+    .mensagem-rotacao h2{
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    .mensagem-rotacao p{
+        font-size: 22px;
+        line-height: 35px;
+    }
+}
+
+/* ===================== */
+/* CARD HISTÓRIA */
+/* ===================== */
+
+.card-historia {
+    display: none;
+
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 700px;
+    max-width: 95%;
+    height: 80vh;
+
+    background: rgba(3, 46, 139, 0.9);
+    color: white;
+
+    padding: 60px 30px 30px 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 0 30px rgba(0,0,0,0.6);
+
+    z-index: 9999;
+
+    overflow-y: auto;
+}
+.card-historia h2{
+    margin-bottom: 15px;
+
+    font-size: 28px;
+}
+
+.card-historia p{
+    font-size: 18px;
+
+    line-height: 28px;
+    white-space: pre-line;
+}
+
+.fechar{
+    position: sticky;
+
+    top: 0;
+
+    margin-left: auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    background: crimson;
+
+    color: white;
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    z-index: 99999;
+}
+
+.fechar:hover{
+    transform: scale(1.1);
+}
+
+/* ANIMAÇÃO */
+
+@keyframes aparecer{
+
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 700px){
+
+    .card-historia{
+
+        left: 50%;
+        bottom: 15px;
+
+        transform: translateX(-50%);
+
+        width: 90%;
+    }
+
+    .card-historia h2{
+        font-size: 24px;
+    }
+
+    .card-historia p{
+        font-size: 16px;
+        line-height: 25px;
+    }
+}
+
+/* LAYOUT FIXO */
+
+.aviso-rotacao{
+    display: none;
+}
+
+.card-historia{
+    top: 50%;
+    left: 50%;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+
+    width: 700px;
+    max-width: 95%;
+}
+
+.card-historia h2{
+    font-size: 28px;
+}
+
+.card-historia p{
+    font-size: 18px;
+    line-height: 28px;
+}

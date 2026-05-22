@@ -1,0 +1,210 @@
+/* =========================
+   RODAPÉ
+========================= */
+
+.rodape{
+    position: relative;
+
+    width: 100%;
+
+    margin-top: 80px;
+
+    overflow: hidden;
+
+    background: rgba(0,0,0,0.35);
+
+    border-top: 3px solid orange;
+
+    color: white;
+}
+
+/* =========================
+   FUNDO LARANJA
+========================= */
+
+.fundo-rodape{
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: 1;
+
+    opacity: 0.5;
+
+    pointer-events: none;
+}
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+.rodape-conteudo{
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    text-align: center;
+
+    padding: 15px 20px 10px 20px;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo-rodape{
+    width: 80px;
+
+    margin-bottom: 20px;
+
+    filter: drop-shadow(0 0 15px rgba(255,140,0,0.5));
+
+    transition: 0.3s;
+}
+
+.logo-rodape:hover{
+    transform: scale(1.05);
+
+    filter: drop-shadow(0 0 25px rgba(255,140,0,0.8));
+}
+
+/* =========================
+   TÍTULO
+========================= */
+
+.rodape h2{
+    font-size: 24px;
+
+    margin-bottom: 15px;
+
+    color: orange;
+}
+
+/* =========================
+   TEXTO
+========================= */
+
+.rodape p{
+    font-size: 17px;
+
+    line-height: 28px;
+
+    max-width: 700px;
+
+    margin: auto;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+.rodape-links{
+    margin-top: 30px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+.rodape-links a{
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.rodape-links a:hover{
+    color: orange;
+
+    transform: scale(1.05);
+}
+
+/* =========================
+   COPYRIGHT
+========================= */
+
+.copy{
+    margin-top: 30px !important;
+
+    font-size: 14px !important;
+
+    opacity: 0.8;
+}
+
+/* =========================
+   ESTRUTURA DA PÁGINA
+========================= */
+
+html,
+body{
+    margin: 0;
+
+    min-height: 100%;
+}
+
+body{
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 100vh;
+}
+
+main{
+    flex: 1;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media screen and (max-width: 700px){
+
+    .rodape-conteudo{
+        padding: 90px 20px 50px 20px;
+    }
+
+    .logo-rodape{
+        width: 70px;
+    }
+
+    .rodape h2{
+        font-size: 26px;
+    }
+
+    .rodape p{
+        font-size: 15px;
+
+        line-height: 24px;
+    }
+
+    .rodape-links{
+        gap: 15px;
+    }
+
+    .rodape-links a{
+        font-size: 16px;
+    }
+
+    .copy{
+        font-size: 12px !important;
+    }
+}

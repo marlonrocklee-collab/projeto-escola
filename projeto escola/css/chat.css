@@ -1,0 +1,395 @@
+.chat-page{
+    width: 100%;
+    height: calc(100dvh - 80px);
+    padding: 6px 40px 14px 40px;
+    color: white;
+    overflow: hidden;
+}
+
+.titulo-pagina{
+
+    text-align: center;
+
+    margin: 40px 0 30px 0;
+
+    color: white;
+}
+
+.titulo-pagina h1{
+
+    font-size: 42px;
+
+    margin-bottom: 10px;
+
+    color: #ffb300;
+
+    text-shadow:
+        0 0 10px rgba(255,179,0,0.4),
+        0 0 20px rgba(0,0,0,0.7);
+}
+
+.titulo-pagina p{
+
+    font-size: 18px;
+
+    opacity: 0.9;
+
+    max-width: 700px;
+
+    margin: auto;
+
+    line-height: 1.6;
+}
+
+.chat-layout{
+    display: flex;
+    align-items: stretch;
+    gap: 25px;
+    max-width: 1200px;
+    min-height: 0;
+    margin: 0 auto;
+}
+
+.discipulos-lista{
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    overflow-y: auto;
+}
+
+.discipulo{
+    border: none;
+    background: rgba(3, 46, 139, 1);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: left;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.discipulo:hover,
+.discipulo.ativo{
+    background: rgba(3, 1, 71, 1);
+    transform: translateX(5px);
+}
+
+.chat-card{
+    flex: 1;
+    min-height: 0;
+    height: calc(100dvh - 220px);
+    background: rgba(0,0,0,0.55);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 25px rgba(0,0,0,0.45);
+    backdrop-filter: blur(5px);
+}
+
+.personagem{
+    width: 90px;
+    height: 100px;
+    margin: 0 auto 6px auto;
+    position: relative;
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+.aureola{
+    width: 62px;
+    height: 16px;
+    border: 3px solid rgba(255,190,65,0.9);
+    border-radius: 50%;
+    margin: 0 auto 5px auto;
+    box-shadow: 0 0 18px rgba(255,190,65,0.8);
+}
+
+.rosto{
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    margin: 0 auto;
+    background: #d8a06f;
+    position: relative;
+    box-shadow: inset 0 -7px 0 rgba(80,42,22,0.25);
+}
+
+.rosto span{
+    width: 8px;
+    height: 8px;
+    background: #1f1b17;
+    border-radius: 50%;
+    position: absolute;
+    top: 24px;
+}
+
+.rosto span:first-child{
+    left: 17px;
+}
+
+.rosto span:last-child{
+    right: 17px;
+}
+
+.corpo{
+    width: 78px;
+    height: 44px;
+    margin: -5px auto 0 auto;
+    border-radius: 45px 45px 12px 12px;
+    background: linear-gradient(135deg, #174e9c, #7a2f2f);
+}
+
+.chat-topo{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.chat-topo h2{
+    font-size: 24px;
+    color: orange;
+    margin-bottom: 3px;
+}
+
+.chat-topo p{
+    font-size: 14px;
+}
+
+.mensagens{
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    padding: 10px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 12px;
+}
+
+@media screen and (max-width: 900px) and (orientation: landscape){
+
+    .chat-page{
+        height: calc(100dvh - 58px);
+        padding: 4px 10px 6px 10px;
+    }
+
+    .chat-header{
+        display: none;
+    }
+
+    .chat-layout{
+        height: 100%;
+        gap: 10px;
+    }
+
+    .discipulos-lista{
+        width: 145px;
+        gap: 4px;
+    }
+
+    .discipulo{
+        padding: 5px 8px;
+        font-size: 12px;
+        border-radius: 7px;
+    }
+
+    .chat-card{
+        height: 100%;
+        padding: 8px;
+        border-radius: 10px;
+    }
+
+    .personagem{
+        display: none;
+    }
+
+    .chat-topo{
+        margin-bottom: 6px;
+    }
+
+    .chat-topo h2{
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+
+    .chat-topo p{
+        display: none;
+    }
+
+    .mensagens{
+        padding: 7px;
+        border-radius: 8px;
+    }
+
+    .mensagem{
+        margin-bottom: 6px;
+        padding: 7px 9px;
+        font-size: 13px;
+        line-height: 1.35;
+    }
+
+    .form-chat{
+        margin-top: 6px;
+        gap: 6px;
+    }
+
+    .form-chat input{
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .form-chat button{
+        padding: 0 14px;
+    }
+}
+
+.mensagem{
+    max-width: 80%;
+    margin-bottom: 9px;
+    padding: 9px 12px;
+    border-radius: 12px;
+    line-height: 1.5;
+    animation: aparecer 0.25s ease;
+}
+
+.mensagem.usuario{
+    margin-left: auto;
+    background: rgba(3, 46, 139, 0.95);
+}
+
+.mensagem.ia{
+    margin-right: auto;
+    background: rgba(255,255,255,0.16);
+}
+
+.form-chat{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.form-chat input{
+    flex: 1;
+    border: none;
+    border-radius: 10px;
+    padding: 11px;
+    font-size: 16px;
+}
+
+.form-chat button{
+    border: none;
+    border-radius: 10px;
+    padding: 0 22px;
+    background: orange;
+    color: #111;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.chat-page + .rodape{
+    display: none;
+}
+
+.form-chat button:disabled{
+    opacity: 0.65;
+    cursor: wait;
+}
+
+@keyframes flutuar{
+    0%, 100%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes aparecer{
+    from{
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 900px) and (orientation: landscape){
+
+    .chat-page{
+        height: calc(100dvh - 58px);
+        padding: 4px 10px 6px 10px;
+    }
+
+    .chat-header{
+        display: none;
+    }
+
+    .chat-layout{
+        height: 100%;
+        gap: 10px;
+    }
+
+    .discipulos-lista{
+        width: 145px;
+        gap: 4px;
+    }
+
+    .discipulo{
+        padding: 5px 8px;
+        font-size: 12px;
+        border-radius: 7px;
+    }
+
+    .chat-card{
+        height: 100%;
+        padding: 8px;
+        border-radius: 10px;
+    }
+
+    .personagem{
+        display: none;
+    }
+
+    .chat-topo{
+        margin-bottom: 6px;
+    }
+
+    .chat-topo h2{
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+
+    .chat-topo p{
+        display: none;
+    }
+
+    .mensagens{
+        padding: 7px;
+        border-radius: 8px;
+    }
+
+    .mensagem{
+        margin-bottom: 6px;
+        padding: 7px 9px;
+        font-size: 13px;
+        line-height: 1.35;
+    }
+
+    .form-chat{
+        margin-top: 6px;
+        gap: 6px;
+    }
+
+    .form-chat input{
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .form-chat button{
+        padding: 0 14px;
+    }
+}

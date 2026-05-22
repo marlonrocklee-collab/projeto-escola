@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Discípulos</title>
+
+    <link rel="stylesheet" href="/css/menu.css">
+    <link rel="stylesheet" href="/css/discipulos.css">
+    <link rel="stylesheet" href="/css/rodape.css">
+
+</head>
+
+<body>
+
+    <!-- MENU -->
+
+    <nav class="menu">
+
+        <img src="/imagens/logo.jpg"
+             alt="Logo"
+             class="logo">
+
+        <ul>
+
+            <li><a href="/index.html">Início</a></li>
+
+            <li><a href="/html/chat.html">Conversar</a></li>
+
+            <li><a href="/html/discipulos.html">Discípulos</a></li>
+
+            <li><a href="/html/fotos.html">Fotos</a></li>
+
+            <li><a href="/html/sobre.html">Sobre nós</a></li>
+
+            <li><a href="/html/contato.html">Contate-nos</a></li>
+
+        </ul>
+
+    </nav>
+
+    <!-- CONTEÚDO -->
+
+    <main class="pagina-discipulos">
+
+        <!-- TÍTULO -->
+
+        <div class="titulo-discipulos">
+
+            <h1>Os Discípulos de Jesus</h1>
+
+            <p>
+                Clique em um discípulo para assistir ao vídeo.
+            </p>
+
+        </div>
+
+        <!-- ÁREA -->
+
+        <div class="conteudo-discipulos">
+
+            <!-- BOTÕES -->
+
+            <section class="discipulos-lista">
+
+                <button class="discipulo"
+                        data-video="/videos/pedro.mp4">
+                    Pedro
+                </button>
+
+                <button class="discipulo"
+                        data-video="/videos/andre.mp4">
+                    André
+                </button>
+
+                <button class="discipulo"
+                        data-video="/videos/tiago.mp4">
+                    Tiago
+                </button>
+
+                <button class="discipulo"
+                        data-video="/videos/joao.mp4">
+                    João
+                </button>
+
+                <button class="discipulo"
+                        data-video="/videos/filipe.mp4">
+                    Filipe
+                </button>
+
+                <button class="discipulo"
+                        data-video="/videos/bartolomeu.mp4">
+                    Bartolomeu
+                </button>
+
+                <button class="discipulo"
+                        data-video="/videos/mateus.mp4">
+                    Mateus
+                </button>
+
+                <button class="discipulo"
+                        data-video="/videos/tome.mp4">
+                    Tomé
+                </button>
+
+                <button class="discipulo"
+                        data-video="/videos/tiago(o menor).mp4">
+                    Tiago de Alfeu
+                </button>
+
+                <button class="discipulo"
+                        data-video="/videos/judas-tadeu.mp4">
+                    Tadeu
+                </button>
+                
+                <button class="discipulo"
+                        data-video="/videos/simao.mp4">
+                    Simão
+                </button>
+
+                <button class="discipulo"
+                        data-video="/videos/judas.mp4">
+                    Judas
+                </button>
+
+
+            </section>
+
+            <!-- VÍDEO -->
+
+            <section class="video-area">
+
+                <video id="video-player"
+                       controls>
+
+                    <source src="/videos/pedro.mp4"
+                            type="video/mp4">
+
+                </video>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- RODAPÉ -->
+
+    <footer class="rodape">
+
+        <div class="rodape-conteudo">
+
+            <img src="/imagens/logo-rodape.png"
+                 alt="Logo"
+                 class="logo-rodape">
+
+            <h2>Projeto Calvário</h2>
+
+            <p>
+                Site criado para compartilhar histórias
+                bíblicas e locais marcantes da trajetória de Jesus.
+            </p>
+
+            <div class="rodape-links">
+
+                <a href="/index.html">Início</a>
+
+                <a href="/html/contato.html">Contato</a>
+
+            </div>
+
+            <p class="versiculo">
+                “Eu sou o caminho, a verdade e a vida.”
+                — João 14:6
+            </p>
+
+            <p class="copy">
+                © 2026 Projeto Calvário
+                - Todos os direitos reservados
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- SCRIPT -->
+
+    <script>
+
+        const botoes =
+            document.querySelectorAll(".discipulo");
+
+        const video =
+            document.getElementById("video-player");
+
+        botoes.forEach(botao => {
+
+            botao.addEventListener("click", () => {
+
+                /* REMOVE ATIVO */
+
+                botoes.forEach(b => {
+                    b.classList.remove("ativo");
+                });
+
+                /* ADICIONA ATIVO */
+
+                botao.classList.add("ativo");
+
+                /* TROCA VÍDEO */
+
+                const novoVideo =
+                    botao.dataset.video;
+
+                video.src = novoVideo;
+
+                video.load();
+
+                video.play();
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>

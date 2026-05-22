@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversar com os Discípulos</title>
+
+    <link rel="stylesheet" href="/css/menu.css">
+    <link rel="stylesheet" href="/css/chat.css">
+    <link rel="stylesheet" href="/css/rodape.css">
+</head>
+
+<body>
+
+    <nav class="menu">
+
+        <img src="/imagens/logo.jpg" alt="Logo" class="logo">
+
+        <ul>
+
+            <li><a href="/index.html">Início</a></li>
+            <li><a href="/html/chat.html">Conversar</a></li>
+            <li><a href="/html/discipulos.html">discipulos</a></li>
+            <li><a href="/html/fotos.html">Fotos</a></li>
+            <li><a href="/html/sobre.html">Sobre nós</a></li>
+            <li><a href="/html/contato.html">Contate-nos</a></li>
+
+        </ul>
+
+    </nav>
+
+    <main class="chat-page">
+
+        <section class="titulo-pagina">
+            <h1>Conversar com os Discípulos</h1>
+            <p>Uma simulação educativa inspirada nos discípulos de Jesus.</p>
+        </section>
+
+        <section class="chat-layout">
+
+            <aside class="discipulos-lista" aria-label="Escolha um discípulo">
+                <button class="discipulo ativo" data-discipulo="pedro">Pedro</button>
+                <button class="discipulo" data-discipulo="andre">André</button>
+                <button class="discipulo" data-discipulo="tiago">Tiago</button>
+                <button class="discipulo" data-discipulo="joao">João</button>
+                <button class="discipulo" data-discipulo="filipe">Filipe</button>
+                <button class="discipulo" data-discipulo="bartolomeu">Bartolomeu</button>
+                <button class="discipulo" data-discipulo="mateus">Mateus</button>
+                <button class="discipulo" data-discipulo="tome">Tomé</button>
+                <button class="discipulo" data-discipulo="tiago_alfeu">Tiago de Alfeu</button>
+                <button class="discipulo" data-discipulo="tadeu">Tadeu</button>
+                <button class="discipulo" data-discipulo="simao">Simão</button>
+                <button class="discipulo" data-discipulo="judas">Judas</button>
+            </aside>
+
+            <section class="chat-card">
+
+                <div class="personagem">
+                    <div class="aureola"></div>
+                    <div class="rosto">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="corpo"></div>
+                </div>
+
+                <div class="chat-topo">
+                    <h2 id="nome-discipulo">Pedro</h2>
+                    <p>Faça uma pergunta e receba uma resposta em formato de conversa.</p>
+                </div>
+
+                <div id="mensagens" class="mensagens" aria-live="polite">
+                    <div class="mensagem ia">
+                        Paz seja contigo. Escolha um discípulo e envie sua pergunta.
+                    </div>
+                </div>
+
+                <form id="form-chat" class="form-chat">
+                    <input id="pergunta" type="text" placeholder="Digite sua pergunta..." autocomplete="off" required>
+                    <button type="submit">Enviar</button>
+                </form>
+
+            </section>
+
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+
+        <div class="rodape-conteudo">
+
+            <img src="/../imagens/logo-rodape.png" alt="Logo" class="logo-rodape">
+
+            <h2>Projeto Calvário</h2>
+            <p>
+                Site criado para compartilhar histórias bíblicas e locais marcantes da trajetória de Jesus.
+            </p>
+
+            <div class="rodape-links">
+                <a href="/index.html">Início</a>
+                <a href="/html/chat.html">Conversar</a>
+                <a href="/html/contato.html">Contato</a>
+            </div>
+
+            <p class="copy">
+                © 2026 Projeto Calvário - Todos os direitos reservados
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="/js/chat.js"></script>
+</body>
+</html>

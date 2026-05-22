@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotos</title>
+
+    <link rel="stylesheet" href="/css/menu.css">
+    <link rel="stylesheet" href="/css/fotos.css">
+    <link rel="stylesheet" href="/css/rodape.css">
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <nav class="menu">
+
+        <img src="/imagens/logo.jpg" alt="Logo" class="logo">
+
+        <ul>
+
+            <li><a href="/index.html">Início</a></li>
+            <li><a href="/html/chat.html">Conversar</a></li>
+            <li><a href="/html/discipulos.html">discipulos</a></li>
+            <li><a href="/html/fotos.html">Fotos</a></li>
+            <li><a href="/html/sobre.html">Sobre nós</a></li>
+            <li><a href="/html/contato.html">Contate-nos</a></li>
+
+        </ul>
+
+    </nav>
+
+    <!-- GALERIA -->
+    <section class="titulo-pagina">
+
+        <h1> Fotos da Nova Jerusalém</h1>
+
+        <p>
+            “Momentos marcantes da grandiosa Nova Jerusalém.”
+        </p>
+
+        <div class="grid-fotos">
+
+            <img src="/imagens/1.jpg" onclick="abrirModal(this)">
+            <img src="/imagens/2.jpg" onclick="abrirModal(this)">
+            <img src="/imagens/3.jpg" onclick="abrirModal(this)">
+            <img src="/imagens/4.jpg" onclick="abrirModal(this)">
+            <img src="/imagens/5.jpg" onclick="abrirModal(this)">
+            <img src="/imagens/6.jpg" onclick="abrirModal(this)">
+            <img src="/imagens/7.jpg" onclick="abrirModal(this)">
+            <img src="/imagens/8.jpg" onclick="abrirModal(this)">
+            <img src="/imagens/9.jpg" onclick="abrirModal(this)">
+            <img src="/imagens/10.jpg" onclick="abrirModal(this)">
+            <img src="/imagens/11.jpg" onclick="abrirModal(this)">
+            <img src="/imagens/12.jpg" onclick="abrirModal(this)">
+            <img src="/imagens/13.jpg" onclick="abrirModal(this)">
+            <img src="/imagens/14.jpg" onclick="abrirModal(this)">
+            <img src="/imagens/15.jpg" onclick="abrirModal(this)">
+            <img src="/imagens/16.jpg" onclick="abrirModal(this)">
+            <img src="/imagens/17.jpg" onclick="abrirModal(this)">
+
+        </div>
+
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+
+        <div class="rodape-conteudo">
+
+            <img src="/../imagens/logo-rodape.png" alt="Logo" class="logo-rodape">
+
+            <h2>Projeto Calvário</h2>
+                Site criado para compartilhar histórias bíblicas e locais marcantes da trajetória de Jesus.
+            </p>
+
+            <div class="rodape-links">
+
+                <a href="#">Início</a>
+                <a href="#">Contato</a>
+
+            </div>
+
+            <p class="copy">
+                © 2026 Projeto Calvário - Todos os direitos reservados
+            </p>
+
+        </div>
+
+    </footer>
+    <!-- MODAL -->
+    <div id="modal" class="modal">
+
+        <span class="fechar" onclick="fecharModal()">&times;</span>
+
+        <img class="modal-img" id="imagem-modal">
+
+    </div>
+
+    <script>
+
+    function abrirModal(img){
+
+        document.getElementById("modal").style.display = "flex";
+
+        document.getElementById("imagem-modal").src = img.src;
+    }
+
+    function fecharModal(){
+
+        document.getElementById("modal").style.display = "none";
+    }
+
+    </script>
+</body>
+</html>

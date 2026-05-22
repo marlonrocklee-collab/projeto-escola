@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nova Jerusalém</title>
+
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fundo.css">
+    <link rel="stylesheet" href="css/rodape.css">
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <nav class="menu">
+
+        <img src="imagens/logo.jpg" alt="Logo" class="logo">
+
+        <ul>
+
+            <li><a href="index.html">Início</a></li>
+            <li><a href="/html/chat.html">Conversar</a></li>
+            <li><a href="/html/discipulos.html">discipulos</a></li>
+            <li><a href="/html/fotos.html">Fotos</a></li>
+            <li><a href="/html/sobre.html">Sobre nós</a></li>
+            <li><a href="/html/contato.html">Contate-nos</a></li>
+
+        </ul>
+
+    </nav>
+
+    <!-- TÍTULO -->
+    <div class="titulo-pagina">
+
+        <h1> Mapa da Nova Jerusalém</h1>
+
+        <p>
+            Explore os principais locais da trajetória de Jesus.
+        </p>
+
+    </div>
+
+    <!-- MAPA -->
+    <div class="mapa">
+
+        <img src="imagens/background.png" class="img-mapa">
+
+        <!-- 0 ACESSO -->
+        <div class="area aacesso" onclick="abrirHistoria(0)"></div>
+        <div class="frase facesso">
+            acesso
+        </div>
+
+        <!-- 1 SERMÃO -->
+        <div class="area asermao" onclick="abrirHistoria(1)"></div>
+        <div class="frase fsermao">
+            sermão
+        </div>
+
+        <!-- 2 TEMPLO -->
+        <div class="area atemplo" onclick="abrirHistoria(2)"></div>
+        <div class="frase ftemplo">
+            templo
+        </div>
+
+        <!-- 3 CENÁCULO -->
+        <div class="area acenaculo" onclick="abrirHistoria(3)"></div>
+        <div class="frase fcenaculo">
+            cenáculo
+        </div>
+
+        <!-- 4 HORTO -->
+        <div class="area ahorto" onclick="abrirHistoria(4)"></div>
+        <div class="frase fhorto">
+            horto das oliveiras
+        </div>
+
+        <!-- 5 PALÁCIO -->
+        <div class="area apalacio" onclick="abrirHistoria(5)"></div>
+        <div class="frase fpalacio">
+            palácio de herodes
+        </div>
+
+        <!-- 6 FÓRUM -->
+        <div class="area aforum" onclick="abrirHistoria(6)"></div>
+        <div class="frase fforum">
+            fórum de pilatos
+        </div>
+
+        <!-- 7 VIA SACRA -->
+        <div class="area avia" onclick="abrirHistoria(7)"></div>
+        <div class="frase fvia">
+            via sacra
+        </div>
+
+        <!-- 8 CALVÁRIO -->
+        <div class="area acalvario" onclick="abrirHistoria(8)"></div>
+        <div class="frase fcalvario">
+            calvário
+        </div>
+
+        <!-- 9 TÚMULO -->
+        <div class="area atumulo" onclick="abrirHistoria(9)"></div>
+        <div class="frase ftumulo">
+            túmulo
+        </div>
+
+        <!-- 10 BETESDA -->
+        <div class="area abetesda" onclick="abrirHistoria(10)"></div>
+        <div class="frase fbetesda">
+            lago de betesda
+        </div>
+
+        <!-- 11 ASMONEUS -->
+        <div class="area aasmoneus" onclick="abrirHistoria(11)"></div>
+        <div class="frase fasmoneus">
+            palácio dos asmoneus
+        </div>
+
+        <!-- 12 OVELHAS -->
+        <div class="area aovelhas" onclick="abrirHistoria(12)"></div>
+        <div class="frase fovelhas">
+            praça das ovelhas
+        </div>
+
+    </div>
+
+    <!-- CARD HISTÓRIA -->
+    <div id="card-historia" class="card-historia">
+
+        <button class="fechar" onclick="fecharHistoria()">
+            ✖
+        </button>
+
+        <h2 id="titulo-historia"></h2>
+
+        <p id="texto-historia"></p>
+
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+
+        <img src="imagens/rodape-laranja.png" class="fundo-rodape">
+
+        <div class="rodape-conteudo">
+
+            <img src="imagens/logo-rodape.png" alt="Logo" class="logo-rodape">
+
+            <h1>Projeto Calvário</h1>
+
+            <h3>
+                Site criado para compartilhar histórias bíblicas e locais marcantes da trajetória de Jesus.
+            </h3>
+
+            <div class="rodape-links">
+
+                <a href="#">Início</a>
+                <a href="#">Contato</a>
+
+            </div>
+
+            <p class="copy">
+                © 2026 Projeto Calvário - Todos os direitos reservados
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- AVISO ROTAÇÃO -->
+    <div class="aviso-rotacao">
+
+        <div class="mensagem-rotacao">
+
+            <h2>📱 Gire o celular</h2>
+
+            <p>
+                Para visualizar melhor o site, utilize o modo horizontal.
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="js/historia.js"></script>
+
+</body>
+</html>

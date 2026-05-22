@@ -1,0 +1,232 @@
+
+/* =========================
+   LISTA DOS DISCÍPULOS
+========================= */
+
+.discipulos-lista{
+
+    width: 230px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-left: 30px;
+}
+
+/* =========================
+   BOTÕES
+========================= */
+
+.discipulo{
+
+    border: none;
+    background: rgba(3, 46, 139, 1);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: left;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+
+.discipulo:hover{
+
+    transform: translateX(5px);
+
+    background: linear-gradient(
+        135deg,
+        #1440c7,
+        #1b56ff
+    );
+}
+
+.discipulo.ativo{
+
+    background: rgba(3, 1, 71, 1);
+    transform: translateX(5px);
+
+    color: #111;
+}
+
+/* =========================
+   TÍTULO
+========================= */
+
+.titulo-discipulos{
+
+    text-align: center;
+
+    margin: 40px 0 30px 0;
+
+    color: white;
+}
+
+.titulo-discipulos h1{
+
+    font-size: 42px;
+
+    margin-bottom: 10px;
+
+    color: #ffb300;
+
+    text-shadow:
+        0 0 10px rgba(255,179,0,0.4),
+        0 0 20px rgba(0,0,0,0.7);
+}
+
+.titulo-discipulos p{
+
+    font-size: 18px;
+
+    opacity: 0.9;
+
+    max-width: 700px;
+
+    margin: auto;
+
+    line-height: 1.6;
+}
+
+/* =========================
+   ÁREA PRINCIPAL
+========================= */
+
+.conteudo-discipulos{
+
+    display: flex;
+
+    gap: 40px;
+
+    align-items: flex-start;
+
+    width: 100%;
+
+    margin-top: 30px;
+}
+
+/* =========================
+   ÁREA DO VÍDEO
+========================= */
+
+.video-area{
+
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+}
+
+/* =========================
+   PLAYER
+========================= */
+
+#video-player{
+
+    width: 800px;
+
+    height: 420px;
+
+    object-fit: contain;
+
+    border-radius: 20px;
+
+    background: black;
+
+    box-shadow:
+        0 0 25px rgba(0,0,0,0.5);
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media(max-width: 900px){
+
+    .conteudo-discipulos{
+
+        flex-direction: column;
+    }
+
+    .discipulos-lista{
+
+        width: 100%;
+    }
+
+    #video-player{
+
+        width: 100%;
+
+        height: auto;
+    }
+}
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width: 768px){
+
+    .conteudo-discipulos{
+
+        display: flex;
+
+        flex-direction: row;
+
+        gap: 12px;
+
+        align-items: flex-start;
+    }
+
+    /* LISTA */
+
+    .discipulos-lista{
+
+        width: 120px;
+
+        margin-left: 0;
+    }
+
+    .discipulo{
+
+        font-size: 12px;
+
+        padding: 8px;
+    }
+
+    /* VÍDEO */
+
+    .video-area{
+
+        flex: 1;
+    }
+
+    #video-player{
+
+        width: 100%;
+
+        height: 70vh;
+
+        object-fit: contain;
+
+        border-radius: 12px;
+    }
+
+    /* TÍTULO */
+
+    .titulo-discipulos h1{
+
+        font-size: 28px;
+    }
+
+    .titulo-discipulos p{
+
+        font-size: 14px;
+    }
+}
